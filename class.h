@@ -81,11 +81,25 @@ public:
 	}
 	void increment()
 	{
-		_current < _max ? _current++ : _min;
+		if (_current < _max)
+		{
+			_current++;
+		}
+		else
+		{
+			_current = _min;
+		}
 	}
 	void decrement()
 	{
-		_current > _min ? _current-- : _max;
+		if (_current > _min)
+		{
+			_current--;
+		}
+		else
+		{
+			_current = _max;
+		}
 	}
 	int getCurrent()
 	{
